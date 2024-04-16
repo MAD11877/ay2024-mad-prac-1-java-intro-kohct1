@@ -32,14 +32,16 @@ public class Question5
     ArrayList<Integer> data = new ArrayList<>();
     int tries = in.nextInt();
     int max = 0;
+    int mode = 0;
     for(int i = 0; i < tries; i++) {
         int number = in.nextInt();
         data.add(number);
         int count = Collections.frequency(data, number);
         if (count > max) {
             max = count;
+            mode = number;
         }
     }
-    System.out.println(max);
+    System.out.println(mode);
   }
 }

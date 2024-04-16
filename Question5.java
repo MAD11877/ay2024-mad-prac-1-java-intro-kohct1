@@ -33,7 +33,6 @@ public class Question5
     int tries = in.nextInt();
     int max = 0;
     for(int i = 0; i < tries; i++) {
-        System.out.print("Enter a number: ");
         int number = in.nextInt();
         data.add(number);
         int count = Collections.frequency(data, number);

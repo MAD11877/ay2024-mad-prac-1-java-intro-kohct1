@@ -27,6 +27,18 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+    ArrayList<Integer> data = new ArrayList<>();
+    int tries = in.nextInt();
+    int max = 0;
+    for(int i = 0; i < tries; i++) {
+        System.out.print("Enter a number: ");
+        int number = in.nextInt();
+        data.add(number);
+        int count = Collections.frequency(data, number);
+        if (count > max) {
+            max = count;
+        }
+    }
+    System.out.println(max);
   }
 }
